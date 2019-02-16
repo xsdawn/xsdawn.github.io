@@ -1,0 +1,35 @@
+---
+layout: default
+title: Categories
+permalink: /categories/
+icon: list
+type: categories
+---
+
+<div class="main" categories>
+    <div class="wrapper">
+        <ul>
+            {% for category in site.categories %}
+            <hr />
+            <li>
+                <h2 id="{{category | first}}">{{category | first}}</h2>
+
+                <ul class="cata-detail">
+                    {% for posts in category  %}
+                    {% for post in posts %}
+                    {% if post.url %}
+                    <li>
+                        <time>
+                            {{ post.date | date:"%F" }}
+                        </time>
+                        <a class="title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                    </li>
+                    {% endif %}
+                    {% endfor %}
+                    {% endfor %}
+                </ul>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>

@@ -146,10 +146,10 @@
  
 
 @media only screen  and (min-width: 320px) and (max-width: 1023px)  {
-    .main { 
+    /* .main { 
 		width:100%;
 		
-	}  
+	}   */
 	
 	.main[archives], .main[categories], .main[tags]{
 		float:none;
@@ -179,7 +179,7 @@
 
 @media only screen  and (min-width: 320px) and (max-width:359px)   {
 	.welcome{
-		font-size:45%;
+		font-size:40%;
 	}
 	.post-meta{
 		font-size:85%;

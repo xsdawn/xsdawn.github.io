@@ -179,7 +179,7 @@
 
 @media only screen  and (min-width: 320px) and (max-width:359px)   {
 	.welcome{
-		font-size:40%;
+		font-size:35%;
 	}
 	.post-meta{
 		font-size:85%;

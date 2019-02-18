@@ -49,6 +49,7 @@ header nav  {
 	-o-transition:max-height 1s ease-out;
 	-ms-transition:max-height 1s ease-out;
 	transition:max-height 1s ease-out;
+ 
 }
 header .navbar span {
 	color:#000;
@@ -99,7 +100,7 @@ header #shownav  a:hover{
 
 @media only screen and (max-width: 1023px){
 
-	header .navbar .navbutton{
+	header .navbar  {
 		display:none;  
    }
    header div.navicon span{
@@ -107,6 +108,7 @@ header #shownav  a:hover{
    }
 
 	header .navbar.responsive {
+		display: block;
 		position: relative;
 	}
 
@@ -123,23 +125,6 @@ header #shownav  a:hover{
 	}
 }  
 
-@media only screen  and (min-width: 375px) and (max-width: 413px)   {
-
-	header #imglogo img{
-		width:3.5em;
-	}
-
-	header #textlogo{
-		width:70%;
-	}
-
-	#textlogo h1.site-name{
-		font-size:150%;
-	}
-	#textlogo h2.blog-motto{
-		font-size:85%;
-	}
-}
 @media only screen  and (min-width: 414px) and (max-width: 479px)   {
 
 	header #textlogo{
@@ -158,7 +143,44 @@ header #shownav  a:hover{
 	}
 }
  
-@media only screen  and (min-width: 320px)and (max-width: 413px)    {
+
+@media only screen  and (min-width: 375px) and (max-width: 413px)   {
+
+	header #imglogo img{
+		width:3.5em;
+	}
+
+	header #textlogo{
+		width:70%;
+	}
+
+	#textlogo h1.site-name{
+		font-size:150%;
+	}
+	#textlogo h2.blog-motto{
+		font-size:85%;
+	}
+}
+
+@media only screen  and (min-width: 360px) and (max-width: 374px)   {
+
+	header #imglogo img{
+		width:3.3em;
+	}
+
+	header #textlogo{
+		width:68%;
+	}
+
+	#textlogo h1.site-name{
+		font-size:140%;
+	}
+	#textlogo h2.blog-motto{
+		font-size:80%;
+	}
+}
+ 
+@media only screen  and (min-width: 320px)and (max-width: 359px)    {
 
 	header #textlogo{
 		width:65%;

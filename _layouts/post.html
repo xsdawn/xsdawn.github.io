@@ -7,17 +7,15 @@ layout: default
         <h1>{{page.title}}</h1>
 
         <div class="post-meta">
-            <span class="myicons"><i class="fa fa-calendar"></i>{{page.date | date:"%F"}} </span>
-            <span class="myicons"><i class="fa fa-folder"></i>{% include category.html %} </span>
-            <span class="myicons"><i class="fa fa-user"></i><a href="{{ site.baseurl }}/about">{{ site.author.name }}</a></span> 
+            <span class="myicons"><i class="fa fa-calendar"></i>{{page.date | date:"%F"}}  </span>
+            <span class="myicons"><i class="fa fa-user"></i><a href="{{ site.baseurl }}/about"> {{ site.author.name }}</a></span> 
         </div>  
   
         <hr>
         {{content}}
         <hr>
- 
+        <span class="myicons"><i class="fa fa-folder"></i> {% include category.html %} </span>
         <span class="myicons"><i class="fa fa-tag"></i>{% include tag.html %}<span >
-
         <hr />
             
         <div class="articleNav">

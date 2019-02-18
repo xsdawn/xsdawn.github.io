@@ -9,7 +9,6 @@
     {% include header.html %}
 
     <div id="container">
-      
       {% if page.layout =='post' %}
       {{ content }}
       {% include tableContent.html %}
@@ -27,10 +26,7 @@
     
     {% include backToTop.html %}
     {% include footer.html %}
-   
-    {% if jekyll.environment == 'production' %}
-    {% include analytics.html %}
-    {% endif %} 
+    
   </body>
 
 </html>

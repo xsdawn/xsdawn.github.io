@@ -4,6 +4,7 @@
 	width:75%;
 	margin-bottom: 60px;
 	color:#222;
+ 
 }
 
 .main[home], [post] {
@@ -29,10 +30,10 @@
 }
 
 .main[home] #page-content h1{
-	font-size:180% !important;
+	font-size:150%;  
 	color:#0ea5c6 ;
 	font-family:  'Courier New','Microsoft Yahei','Hiragino Sans GB',Helvetica,'Helvetica Neue';
-	font-weight: bold !important;
+	font-weight: bold 
 	
 }
 
@@ -73,7 +74,7 @@
 
  
 .main  h1 {
-	font-size:200%;
+	font-size:150%;
 	color:#0ea5c6;
 	margin-bottom:15px;
 }
@@ -83,19 +84,19 @@
 	margin-bottom:10px;
 }
 .main h2{
-	font-size:160%;
-}
-.main h3{
-	font-size:150%;
-}
-.main h4{
-	font-size:140%;
-}
-.main h5{
 	font-size:130%;
 }
-.main h6{
+.main h3{
 	font-size:120%;
+}
+.main h4{
+	font-size:110%;
+}
+.main h5{
+	font-size:100%;
+}
+.main h6{
+	font-size:90%;
 }
 
 .main[post] .post-meta {
@@ -142,15 +143,47 @@
 	padding-left:50px;
 }
 
+ 
+
 @media only screen  and (min-width: 320px) and (max-width: 1023px)  {
     .main { 
-        width:98%;
+		width:100%;
+		
 	}  
 	
 	.main[archives], .main[categories], .main[tags]{
 		float:none;
-	}
-
-	 
+	} 
 }
+ 
+@media only screen  and (min-width: 414px) and (max-width: 479px)   {
+	.welcome{
+		font-size:60%;
+	}
+}
+
+@media only screen  and (min-width: 375px) and (max-width:413px)   {
+	.welcome{
+		font-size:55%;
+	}
+}
+
+@media only screen  and (min-width: 360px) and (max-width:374px)   {
+	.welcome{
+		font-size:50%;
+	}
+	.post-meta{
+		font-size:95%;
+	}
+}
+
+@media only screen  and (min-width: 320px) and (max-width:359px)   {
+	.welcome{
+		font-size:45%;
+	}
+	.post-meta{
+		font-size:85%;
+	}
+}
+
  

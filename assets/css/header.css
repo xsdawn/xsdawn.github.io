@@ -1,4 +1,4 @@
-#header{
+header{
 	background: center #0ea5c6;
 	width:100%;
 	color:#fff;
@@ -6,13 +6,13 @@
 	-webkit-box-shadow:2px 4px 5px rgba(3,3,3,0.2);
 	box-shadow:2px 4px 5px rgba(3,3,3,0.2);
 }
-#header .wrapper{
+header .wrapper{
 	width:95%;
 	margin:0 auto;
 	position:relative;
 	overflow:hidden;
 }
-#header .wrapper a{
+header .wrapper a{
 	color:#fff;
 	font-weight: bold;
 }
@@ -38,7 +38,7 @@
 	font-size:120%;
 	font-weight:normal;
 }
-#header nav  {
+header nav  {
 	float:left;
 	width: 100%;
 	font-size:112.5%;
@@ -50,10 +50,10 @@
 	-ms-transition:max-height 1s ease-out;
 	transition:max-height 1s ease-out;
 }
-#header .navbar span {
+header .navbar span {
 	color:#000;
 }
- #header  div.navicon span {
+header  div.navicon span {
 	color:#000;
 	float:right;
 	display:none; 
@@ -73,7 +73,7 @@
 	padding-right:10px;
 }    
  
-#header #shownav  a:hover{
+header #shownav  a:hover{
 	background:#1b7f9e;
 	color:#e9cd4c;
 	font-family:'ZCOOL KuaiLe',  'Courier New','Microsoft Yahei','Hiragino Sans GB',Helvetica,'Helvetica Neue';
@@ -99,23 +99,23 @@
 
 @media only screen and (max-width: 1023px){
 
-	#header .navbar .navbutton{
+	header .navbar .navbutton{
 		display:none;  
    }
-   #header div.navicon span{
+   header div.navicon span{
 		display: block;
    }
 
-	#header .navbar.responsive {
+	header .navbar.responsive {
 		position: relative;
 	}
 
-	#header .navbar.responsive .navbutton {
+	header .navbar.responsive .navbutton {
 		float:none;
 		display: block;
 	}  
 	
-	#header .navbar.responsive .navbutton li {
+	header .navbar.responsive .navbutton li {
 		float: none;
 		display: block;
 		position: relative;
@@ -125,11 +125,11 @@
 
 @media only screen  and (min-width: 375px) and (max-width: 413px)   {
 
-	#header #imglogo img{
+	header #imglogo img{
 		width:3.5em;
 	}
 
-	#header #textlogo{
+	header #textlogo{
 		width:70%;
 	}
 
@@ -142,11 +142,11 @@
 }
 @media only screen  and (min-width: 414px) and (max-width: 479px)   {
 
-	#header #textlogo{
+	header #textlogo{
 		width:65%;
 	}
 
-	#header #imglogo img{
+	header #imglogo img{
 		width:4.5em;
 	}
 
@@ -160,11 +160,11 @@
  
 @media only screen  and (min-width: 320px)and (max-width: 413px)    {
 
-	#header #textlogo{
+	header #textlogo{
 		width:65%;
 	}
 
-	#header #imglogo img{
+	header #imglogo img{
 		width:3em;
 	}
 

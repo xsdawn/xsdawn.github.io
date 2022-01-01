@@ -1,0 +1,72 @@
+<footer>
+    <div class="wrapper">
+        <p class="description">
+            {% if site.description_footer %} {{site.description_footer}} {% endif %}
+        </p>
+
+        <div id="social-contact">
+            {% if site.author.github %}
+            <a href="https://github.com/{{ site.author.github }}" target="_blank" title="github">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+            {% endif %}
+            {% if site.author.twitter %}
+            <a href="https://twitter.com/{{ site.author.twitter }}" target="_blank" title="twitter">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+            {% endif %}
+            {% if site.author.facebook %}
+            <a href="https://www.facebook.com/{{ site.author.facebook }}" target="_blank" title="facebook">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-facebook-official fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+            {% endif %}
+            {% if site.author.linkedin %}
+            <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}" target="_blank" title="linkedin">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+            {% endif %}
+            {% if site.author.google_plus %}
+            <a href="https://plus.google.com/{{ site.author.google_plus }}?rel=author" target="_blank" title="Google+">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-google-plus-official fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+            {% endif %}
+            {% if site.author.weibo %}
+            <a href="http://weibo.com/{{ site.author.weibo }}" target="_blank" title="微博">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+                {% endif %}
+
+                {% if site.author.email %}
+                <a href="mailto:{{ site.author.email }}" target="_blank" title="Email Me">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+                {% endif %}
+        </div>
+
+        <p class="copyright">
+            <span> Site powered by <a href="http://jekyllrb.com" target="_blank" title="jekyll">Jekyll</a> & <a href="https://pages.github.com/" target="_blank" title="github">Github Pages</a></span>
+            <br />
+            <span>Theme designed by <a href="https://github.com/xsdawn" target="_blank" title="{{ site.author.name }}">{{ site.author.name }}</a></span>
+        </p>
+    </div>
+</footer>

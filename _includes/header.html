@@ -1,0 +1,90 @@
+<header>
+
+    <div class="wrapper">
+
+        <div id="imglogo">
+            <a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/assets/img/logo.png" alt="{{ site.title }}"
+                    title="{{ site.title }}" /></a>
+        </div>
+
+        <div id="textlogo">
+            <h1 class="site-name"><a href="{{ site.baseurl }}/" title="{{ site.title }}">{{ site.title }}</a></h1>
+            {% if site.tagline %}
+            <h2 class="blog-motto">{{ site.tagline }}</h2>
+            {% endif %}
+        </div>
+        <div class="navicon">
+            <a  href="javascript:void(0);" onclick="myFunction()" title="menu">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-bars fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+        </div>
+        <!-- Navigation -->
+        <nav class="navbar" id="shownav">
+
+            <div class="animated">
+                <ul class="navbutton">
+                    {% for m in site.menu %}
+                    <li>
+                        <!--
+                    -->{% if m[1] =='/archives' %}
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-archive fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <!--
+                    -->{% elsif m[1] =='/categories' %}
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-list-alt fa-stack-1x fa-inverse"></i>&emsp;
+                        </span>
+                        <!--
+                    -->{% elsif m[1] =='/tags' %}
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-tags fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <!--
+                    -->{% elsif m[1] =='/demo' %}
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-code fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <!--
+                    -->{% elsif m[1] =='/about' %}
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-paw fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <!--
+                    -->{% else %}
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-home fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <!--
+                    -->{% endif %}
+                        <!--
+                    --><span><a href="{{ site.baseurl }}{{ m[1] }}"> {{ m[0] }}</a></span>
+                        <!--
+                -->
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("shownav");
+        if (x.className === "navbar") {
+            x.className += " responsive";
+        } else {
+            x.className = "navbar";
+        }
+    }
+</script>

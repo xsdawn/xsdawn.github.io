@@ -1,0 +1,18 @@
+<div class="articles-nav">
+
+    {% if page.previous %}
+
+    <span>
+        <a href="{{ page.previous.url | prepend: site.baseurl }}"> &#171</a>Previous:<a
+            href="{{ page.previous.url | prepend: site.baseurl }}">{{ page.previous.title }}</a>
+    </span>
+    {% endif %}
+    <br>
+    {% if page.next %}
+    <span>
+        <a href="{{ page.next.url | prepend: site.baseurl }}">&#187</a>Next:<a
+            href="{{ page.next.url | prepend: site.baseurl }}">{{ page.next.title }}</a>
+    </span>
+    {% endif %}
+
+</div>

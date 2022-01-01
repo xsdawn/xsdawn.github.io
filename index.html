@@ -1,0 +1,88 @@
+---
+layout: default
+---
+
+<div class="main" home>
+    <div class="wrapper">
+
+        <div class="welcome">
+            <h1>在debugs的路上越走越远..... </h1>
+        </div>
+
+        <hr />
+
+        {% for post in paginator.posts %}
+        <div class="post-preview" id="page-content">
+            <a href="{{ post.url | prepend: site.baseurl }}"><h1>{{ post.title }}</h1></a>
+
+            <div class="post-meta">
+                <span><i class="fa fa-calendar "></i></span>
+                {{ post.date | date: "%F" }}
+
+                <span class="fa-stack fa-sm"><i class="fa fa-user  "></i></span>
+                {% if site.author %}
+                    <a href="{{ site.baseurl }}/about">{{site.author.name}}</a>
+                {% else %}
+                    {{ site.title }}
+                {% endif %}
+            </div>
+            <br/>
+            <div class="post-content-preview ">
+                {{ post.excerpt | remove: '<p>' | remove: '</p>' }}
+            </div>
+
+            <br/>
+
+            <div class="post-cata">
+                <span><i class="fa fa-folder  "></i></span>
+                {% include category.html %}
+            </div>
+
+            <div class="post-tag">
+                <span><i class="fa fa-tag"></i></span>
+                {% include tag.html %}
+            </div>
+
+            <div class="post-read">
+                <a href="{{ post.url | prepend: site.baseurl }}" title="Read All">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-angle-double-down fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+            </div>
+
+            <hr />
+        </div>
+        {% endfor %}
+
+        <div class="pagination" id="page-nav">
+        {% if paginator.total_pages > 1 %}
+
+            {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+            {% endif %}
+
+            {% if paginator.page == 1 %}
+            <a href="{{site.baseurl }}"> <span class="current"><em>1</em></span></a>
+            {% else %}
+            <a href="/"> <em>1</em> </a>
+            {% endif %}
+
+            {% for page in (2..paginator.total_pages) %}
+            {% if page == paginator.page %}
+            <span class="current"><em>{{ page }}</em></span>
+            {% else %}
+            <a href="{{ site.baseurl }}/page{{page}}">{{ page }}</a>
+            {% endif %}
+            {% endfor %}
+
+            {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+            {% endif %}
+
+        {% elsif paginator.total_pages == 1 %}
+            <span class="current"><em>1</em></span>
+        {% endif %}
+        </div>
+    </div>
+</div>

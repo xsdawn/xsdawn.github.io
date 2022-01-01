@@ -1,0 +1,62 @@
+<div class="sidebar" leftside>
+
+    <div class="wrapper">
+
+        {% if page.type == "archives" %}
+        <div class="leftside-archives">
+            <span class="fa-stack fa-lg"><i class="fa fa-archive"></i> Archives</span>
+
+            {% assign count = 1 %}
+            {% for post in site.posts  %}
+            {% capture this_date %}{{ post.date }}{% endcapture %}
+            {% capture next_date %}{{ post.previous.date }}{% endcapture %}
+            {% capture this_date_str %}{{ this_date | date: "%Y-%m" }}{% endcapture %}
+            {% capture next_date_str %}{{ next_date | date: "%Y-%m" }}{% endcapture %}
+            {% if this_date_str != next_date_str %}
+            <ul class="archive-list">
+                <li class="archive-list-item">
+                    <a class="archive-list-link"
+                        href="#{{ this_date | date: '%Y-%m' }}">{{ this_date | date: "%Y %b" }}</a>
+                    <span class="archive-list-count">({{ count }})</span>
+                    {% assign count = 1 %}
+                    {% else %}
+                    {% assign count = count | plus: 1 %}
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        {% elsif page.type=="categories" %}
+        <div class="leftside-categories">
+            <span class="fa-stack fa-lg"><i class="fa fa-th-list"></i> Categories</span>
+            <ul class="cata-list">
+                {% for category in site.categories %}
+                <li>
+                    <a href="#{{ category | first }}" cate="{{ category | first }}">{{ category | first }} </a>
+                    <span>({{ category | last | size }}) </span>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        {% else page.type =="tags" %}
+        <div class="leftside-tags">
+            <span class="fa-stack fa-lg"><i class="fa fa-tags"></i> Tags</span>
+            <div class="tag-list">
+                {% for tag in site.tags %}
+                {% if tag[1] | size != 0 %}
+                <ul>
+                    <li>
+                        <a href="#{{ tag[0] }}" title="{{ tag[0] }}">{{ tag[0] }}</a>
+                        <span>({{tag[1]|size}})</span>
+                    </li>
+                </ul>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+    </div>
+
+</div>

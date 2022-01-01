@@ -1,0 +1,49 @@
+<div class="sidebar"  home >
+
+  <aside class="widgets">
+
+    <div class="side-rent">
+      <span class="fa-stack fa-lg"><i class="fa fa-folder-open"></i> Recent Posts </span>
+      <ul class="content-ul" rent>
+        {% for post in site.posts offset: 0 limit: 10  %}
+        <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="side-catalog">
+      <span class="fa-stack fa-lg"><i class="fa fa-th-list"></i> Categories </span>
+      <ul class="content-ul" cata>
+        {% for category in site.categories %}
+        <li>
+          <a href="{{ root_url }}/{{ site.category_dir }}#{{ category | first }}" class="categories-list-item"
+            cate="{{ category | first }}">{{ category | first }} </a>
+          <span class="cat-num">{{ category | last | size }} </span>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="side-tags">
+      <span class="fa-stack fa-lg"><i class="fa fa-tags"></i> Tags </span>
+      <div class="tags-cloud">
+        {% for tag in site.tags %}
+          <a href="{{ root_url }}/{{ site.tag_dir }}#{{ tag[0] }}" title="{{ tag[0] }}">{{ tag[0] }}</a>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="side-links">
+      <span class="fa-stack fa-lg"><i class="fa fa-link"></i> Links</span>
+      <ul class="content-ul" links>
+        {% for i in site.links %}
+        <li>
+          <a href="{{ i[1] }}" target="_blank" title="{{ i[0] }}">{{ i[0] }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+  </aside>
+
+</div>

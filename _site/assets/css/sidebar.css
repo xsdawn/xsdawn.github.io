@@ -1,0 +1,144 @@
+.sidebar { 
+    float: right;
+    width:23%;
+}  
+
+.widgets {
+    margin:0 auto;
+    background-color: none;
+}
+.sidebar .widgets>div{
+    background-color: rgb(248,248,253);  
+    box-shadow: 0 1px 2px rgba(0,0,0,0.4), 0 0 30px rgba(10,10,0,0.1) inset;
+    margin-bottom: 30px;
+    padding:5px;
+    padding-bottom:10px;
+    
+}
+.sidebar[home] div>span{
+    font-size:20px;
+    font-weight: bold;
+    color:#2ca6cb;
+    border-bottom: 0.1em solid #ccc;
+    width:100%;
+    padding-left:10px;
+    overflow: hidden;
+}
+ .content-ul{
+    width:100%;
+    margin: 0 auto;
+    padding: 10px 20px 0 10px ;  
+}
+ .content-ul[rent]  {
+    list-style: disc  ;
+    color:grey;
+    margin-left:20px;
+}
+
+.content-ul[cata] li {
+    border-bottom: 0.05em solid #ccc;
+}
+.cat-num{
+    float: right;
+    color:#195fe2d0;;
+}
+
+ 
+.sidebar[tocnav] .tables{
+    width:23%;
+    position: fixed;
+    background-color: rgba(248, 248, 253, 0.657); 
+    border:1px solid #ccc; 
+    border-radius:  5px;
+    box-shadow: 0 1px 2px rgba(145, 213, 245, 0.4), 0 0 30px rgba(10,10,0,0.1) inset;
+    margin: 0 auto;
+    padding:5px;  
+    overflow: hidden;
+    font-family: 'Courier New','Microsoft Yahei','Hiragino Sans GB',Helvetica,'Helvetica Neue' ,'ZCOOL KuaiLe';
+}
+
+ 
+/* toc title */
+.sidebar[tocnav]  .tables>ul>li{
+    font-size:120%; 
+    text-align: center;
+}
+.sidebar[tocnav]  .tables>ul>li a{
+    color:#222;
+}
+/* toc heading 1 */
+.sidebar[tocnav] .tables>ul>li>ul {
+    list-style:disc inside;
+    text-align: left;
+    font-size:100%;
+    margin:0 auto;
+    padding-top: 10px; 
+    padding-left:10px;
+}
+
+.sidebar[tocnav]  .tables>ul>li>ul a{
+    color:#195fe2d0;
+}
+
+.sidebar[tocnav]  a:hover{
+    color:#e62f5c !important;
+}
+/* toc heading 2*/
+.sidebar[tocnav] .tables ul ul ul{
+    list-style: none;
+    font-size:90%;
+    margin:0 50px;
+}
+ /* toc heading 3456   */
+.sidebar[tocnav] .tables ul ul ul ul{
+    list-style: none;
+    font-size:90%;
+    margin:0 30px;
+}
+
+.sidebar[leftside]{
+    float:left;  
+    width:20%;
+    background-color: rgb(248,248,253);  
+    box-shadow: 0 1px 2px rgba(0,0,0,0.4), 0 0 30px rgba(10,10,0,0.1) inset;
+    margin-bottom: 30px;
+    padding:5px;
+    padding-bottom:10px;
+    overflow: hidden;
+}
+
+.sidebar[leftside] .fa-stack{
+    color:#222;
+    display: inline;
+}
+
+.sidebar[leftside] .leftside-archives, .leftside-categories, .leftside-tags{
+    margin: 0 auto;
+    width:85%;
+}
+
+.cata-list, .tag-list ul{
+	list-style: disc;
+	padding-left:20px;
+}
+
+.cata-list span{
+    color:grey;
+}
+
+
+@media only screen  and (min-width: 320px) and (max-width: 1023px)  {
+    .sidebar { 
+        float: left;
+        width:100%;
+    }  
+
+    .sidebar[leftside]{
+        width:100%;
+        float:none;
+    }
+
+    .sidebar[tocnav]{
+        display: none;
+    }
+}
